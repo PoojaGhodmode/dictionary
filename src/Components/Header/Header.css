@@ -1,0 +1,28 @@
+.title {
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+.header {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inputs {
+  width: 90%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.input-text {
+  width: 70%;
+}
+.select-input {
+  width: 30%;
+}

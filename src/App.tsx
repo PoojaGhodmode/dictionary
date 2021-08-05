@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@material-ui/core";
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { dictionaryAPI } from "./API";
+import "./App.css";
+import Header from "./Components/Header";
 
 function App() {
+  const [meanings, setMeanings] = useState([]);
+  const [word, setWord] = useState("");
+  const [category, setCategory] = useState("en");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (word) {
+        const data = await dictionaryAPI(word, category);
+        setMeanings(data);
+      }
+    };
+    fetchData();
+  }, [word, category]);
+  console.log(meanings);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container className="container" maxWidth="md">
+        <Header
+          category={category}
+          setCategory={setCategory}
+          setWord={setWord}
+          word={word}
+        />
+      </Container>
     </div>
   );
 }
