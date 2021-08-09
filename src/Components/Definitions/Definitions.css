@@ -1,0 +1,36 @@
+.meanings {
+  background: rgba(255, 255, 255, 0.1);
+  width: 80%;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.subtitle {
+  font-size: 5vw;
+  letter-spacing: 2px;
+}
+
+.single-mean {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: 1px solid;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.definition {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+audio {
+  background-color: #fff;
+  border-radius: 10px;
+}

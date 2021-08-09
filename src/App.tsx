@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { dictionaryAPI } from "./API";
 import "./App.css";
+import Definitions from "./Components/Definitions";
 import Header from "./Components/Header";
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
           setWord={setWord}
           word={word}
         />
+        {meanings && (
+          <Definitions word={word} meanings={meanings} category={category} />
+        )}
       </Container>
     </div>
   );
