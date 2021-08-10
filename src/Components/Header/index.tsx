@@ -12,15 +12,22 @@ type Props = {
   setCategory: React.Dispatch<React.SetStateAction<string>>;
   setWord: React.Dispatch<React.SetStateAction<string>>;
   word: string;
+  IsdarkTheme: boolean;
 };
 
-const Header: React.FC<Props> = ({ category, setCategory, setWord, word }) => {
+const Header: React.FC<Props> = ({
+  category,
+  setCategory,
+  setWord,
+  word,
+  IsdarkTheme,
+}) => {
   const darkTheme = createTheme({
     palette: {
       primary: {
-        main: "#fff",
+        main: IsdarkTheme ? "#fff" : "#000",
       },
-      type: "dark",
+      type: IsdarkTheme ? "dark" : "light",
     },
   });
 

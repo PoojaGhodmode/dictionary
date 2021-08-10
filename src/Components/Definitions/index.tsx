@@ -2,10 +2,10 @@ import "./Definitions.css";
 type Props = {
   word: string;
   meanings: any;
-  category: string;
+
 };
 
-const Definitions: React.FC<Props> = ({ word, meanings, category }) => {
+const Definitions: React.FC<Props> = ({ word, meanings }) => {
   return (
     <div className="meanings">
       {word === "" ? (

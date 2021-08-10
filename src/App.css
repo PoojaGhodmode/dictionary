@@ -1,12 +1,18 @@
 .App {
   height: 100vh;
-  background: #414345;
-  color: aliceblue;
+  
   font-family: Tahoma, Geneva, sans-serif;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+}
+
+.btn {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  display: flex;
+  align-items: center;
+  
 }
