@@ -51,7 +51,7 @@ function App() {
         transition: "all 0.5s ease-in-out",
       }}
     >
-      <Container className="container" maxWidth="md">
+      <div className="container">
         <div className="btn">
           <span>
             {IsdarkTheme ? (
@@ -79,7 +79,7 @@ function App() {
             IsdarkTheme={IsdarkTheme}
           />
         )}
-      </Container>
+      </div>
     </div>
   );
 }
