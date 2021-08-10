@@ -1,18 +1,18 @@
 .App {
   height: 100vh;
-  
   font-family: Tahoma, Geneva, sans-serif;
+
 }
 
 .container {
   height: 100vh;
+
 }
 
 .btn {
   position: absolute;
-  right: 30px;
-  top: 15px;
+  right: 20px;
+  top: 10px;
   display: flex;
   align-items: center;
-  
 }

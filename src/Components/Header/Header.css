@@ -3,10 +3,12 @@
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 10px;
+  margin-top: 1rem;
 }
 
 .header {
   height: 35vh;
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
