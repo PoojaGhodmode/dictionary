@@ -6,18 +6,8 @@ type Props = {
 };
 
 const Definitions: React.FC<Props> = ({ word, meanings, category }) => {
-  console.log(meanings[0]?.phonetics[0]?.audio);
   return (
     <div className="meanings">
-      {meanings[0] && word && category === "en" && (
-        <audio preload="auto" controls>
-          <source
-            src={meanings[0]?.phonetics[0]?.audio}
-            type="audio/mpeg"
-          ></source>
-          Your browser does not support this
-        </audio>
-      )}
       {word === "" ? (
         <span className="subtitle">Type something to get definitions..</span>
       ) : (
