@@ -70,9 +70,15 @@ function App() {
           setCategory={setCategory}
           setWord={setWord}
           word={word}
-          IsdarkTheme = {IsdarkTheme}
+          IsdarkTheme={IsdarkTheme}
         />
-        {meanings && <Definitions word={word} meanings={meanings} />}
+        {meanings && (
+          <Definitions
+            word={word}
+            meanings={meanings}
+            IsdarkTheme={IsdarkTheme}
+          />
+        )}
       </Container>
     </div>
   );

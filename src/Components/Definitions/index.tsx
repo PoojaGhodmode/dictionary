@@ -2,12 +2,18 @@ import "./Definitions.css";
 type Props = {
   word: string;
   meanings: any;
-
+  IsdarkTheme: boolean;
 };
 
-const Definitions: React.FC<Props> = ({ word, meanings }) => {
+const Definitions: React.FC<Props> = ({ word, meanings, IsdarkTheme }) => {
   return (
-    <div className="meanings">
+    <div
+      className="meanings"
+      style={{
+        background: IsdarkTheme ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0.3)",
+        color: IsdarkTheme ? "aliceblue" : "#414345",
+      }}
+    >
       {word === "" ? (
         <span className="subtitle">Type something to get definitions..</span>
       ) : (
