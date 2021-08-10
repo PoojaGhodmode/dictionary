@@ -26,7 +26,7 @@ function App() {
     };
     fetchData();
   }, [word, category]);
-  console.log(meanings);
+
   const DarkTheme = withStyles({
     switchBase: {
       color: grey[300],
