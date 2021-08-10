@@ -1,5 +1,3 @@
-import { Container, withStyles } from "@material-ui/core";
-import { grey } from "@material-ui/core/colors";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -7,7 +5,7 @@ import { dictionaryAPI } from "./API";
 import "./App.css";
 import Definitions from "./Components/Definitions";
 import Header from "./Components/Header";
-import Switch from "@material-ui/core/Switch";
+
 import Brightness3RoundedIcon from "@material-ui/icons/Brightness3Rounded";
 import Brightness7RoundedIcon from "@material-ui/icons/Brightness7Rounded";
 
@@ -27,21 +25,6 @@ function App() {
     fetchData();
   }, [word, category]);
 
-  const DarkTheme = withStyles({
-    switchBase: {
-      color: grey[300],
-
-      "&$checked": {
-        color: grey[500],
-      },
-      "&$checked + $track": {
-        backgroundColor: grey[500],
-      },
-    },
-    checked: {},
-    track: {},
-  })(Switch);
-
   return (
     <div
       className="App"
@@ -53,17 +36,16 @@ function App() {
     >
       <div className="container">
         <div className="btn">
-          <span>
+          <button
+            onClick={() => setIsdarkTheme(!IsdarkTheme)}
+            style={{ color: IsdarkTheme ? "aliceblue" : "#414345" }}
+          >
             {IsdarkTheme ? (
               <Brightness3RoundedIcon />
             ) : (
               <Brightness7RoundedIcon />
             )}
-          </span>
-          <DarkTheme
-            checked={IsdarkTheme}
-            onChange={() => setIsdarkTheme(!IsdarkTheme)}
-          />
+          </button>
         </div>
         <Header
           category={category}
